@@ -111,4 +111,8 @@ alias cd..='cd ..'
 
 [[ "$PS1" ]] && echo -e "\e[00;33m$(/usr/bin/fortune)\e[00m"
 
-source /usr/share/git/completion/git-prompt.sh
+[ -e /usr/share/git-core/contrib/completion/git-prompt.sh ] && source /usr/share/git-core/contrib/completion/git-prompt.sh
+[ -e /usr/share/git/completion/git-prompt.sh ] && source /usr/share/git/completion/git-prompt.sh
+
+
+
