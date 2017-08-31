@@ -107,3 +107,14 @@ alias rfa="repo forall -c git fetch --all -p"
 echo -e "\e[00;34m$(/usr/bin/fortune)\e[00m"
 
 alias q=sl
+
+if [[ "$TERM" == "dumb" ]]
+then
+    unsetopt zle
+    unsetopt prompt_cr
+    unsetopt prompt_subst
+    unfunction precmd
+    unfunction preexec
+    PS1='$ '
+fi
+
